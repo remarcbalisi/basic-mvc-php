@@ -12,7 +12,7 @@ class AdminLogin extends Controller{
 
         if( $this->auth_user->auth ){
 
-            $link = isset($_SERVER['HTTPS']) ? "https": "http"."://".htmlspecialchars($_SERVER["HTTP_HOST"])."/plazaalemania/public/adminhome/index";
+            $link = Globals::baseUrl()."/public/adminhome/index";
             header("Location: ".$link);
             exit();
 
@@ -32,7 +32,7 @@ class AdminLogin extends Controller{
             if( !empty($user) ){
                 if( password_verify($_POST['password'], $user[0]['password']) ){
                     $_SESSION['usermail'] = $_POST['email'];
-                    $link = isset($_SERVER['HTTPS']) ? "https": "http"."://".htmlspecialchars($_SERVER["HTTP_HOST"])."/plazaalemania/public/adminhome/index";
+                    $link = Globals::baseUrl()."/public/adminhome/index";
                     header("Location: ".$link);
                     exit();
                 }

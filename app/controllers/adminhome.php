@@ -18,7 +18,7 @@ class AdminHome extends Controller{
         }
         else{
 
-            $link = isset($_SERVER['HTTPS']) ? "https": "http"."://".htmlspecialchars($_SERVER["HTTP_HOST"])."/plazaalemania/public/adminlogin";
+            $link = Globals::baseUrl()."/public/adminlogin";
             header("Location: ".$link);
             exit();
 
@@ -130,7 +130,7 @@ class AdminHome extends Controller{
         }
         else{
 
-            $link = isset($_SERVER['HTTPS']) ? "https": "http"."://".htmlspecialchars($_SERVER["HTTP_HOST"])."/plazaalemania/public/adminlogin";
+            $link = Globals::baseUrl()."/public/adminlogin";
             header("Location: ".$link);
             exit();
 
@@ -145,7 +145,7 @@ class AdminHome extends Controller{
         setcookie(session_name(),'',0,'/');
         session_regenerate_id(true);
 
-        $link = isset($_SERVER['HTTPS']) ? "https": "http"."://".htmlspecialchars($_SERVER["HTTP_HOST"])."/plazaalemania/public/adminlogin";
+        $link = Globals::baseUrl()."/public/adminlogin";
         header("Location: ".$link);
         exit();
 
