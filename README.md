@@ -51,7 +51,7 @@ Next to filename is function name ( /adminlogin/<function_name> )
 
 Next to function name are parameters; you can have multiple params by adding another slash
 
-( /adminlogin/<function_name/<params>/<params> )
+( /adminlogin/function_name/parameter/parameter2 )
 
 # check if user is currently logged in
     protected $auth_user;
