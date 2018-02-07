@@ -14,11 +14,11 @@ git pull origin master
 <appfolder>/app/core/DatabaseConn.php
 
 *edit these variables
-protected $servername = "localhost";
 
-protected $username = "root";
+    protected $servername = "localhost";
+    protected $username = "root";
 
-protected $password = "";
+    protected $password = "";
 
 protected $dbname = "plazaalemania";
 
@@ -30,55 +30,55 @@ change this variable according to the name of your appfolder
 protected static $root_dir = "mvc";
 
 # check if user is currently logged in
-protected $auth_user;
-protected $admin_users;
+    protected $auth_user;
+    protected $admin_users;
 
-public function __construct(){
-    $this->auth_user = $this->model('AuthUser');
-        $this->admin_users = $this->model('User')->getByRole("admin");
-}
+    public function __construct(){
+        $this->auth_user = $this->model('AuthUser');
+            $this->admin_users = $this->model('User')->getByRole("admin");
+    }
 
-public function index(){
-    if( $this->auth_user->auth ){
-      //user is logged in
+    public function index(){
+        if( $this->auth_user->auth ){
+          //user is logged in
+        }
+        else{
+          //user is not authenticated
+        }
     }
-    else{
-      //user is not authenticated
-    }
-}
 
 # creating models
-class User{
+    class User{
   
-  //model attributes
-  public $id;
+      //model attributes
+      public $id;
 
-  //get all users
-  public function get(){
+      //get all users
+      public function get(){
     
-      $this->createConnection();
-      $sql = "SELECT * from user";
-      $result = $this->conn->query($sql);
-      $data = [];
+          $this->createConnection();
+          $sql = "SELECT * from user";
+          $result = $this->conn->query($sql);
+          $data = [];
 
-      if (!$result) {
-            trigger_error('Invalid query: ' . $this->conn->error);
-        }
-
-      if ($result->num_rows > 0) {
-          // output data of each row
-          while( $row = $result->fetch_assoc() ){
-              array_push($data, $row);
+          if (!$result) {
+                trigger_error('Invalid query: ' . $this->conn->error);
           }
-          return $data;
 
-        } else {
-            $result = [];
-            return $result;
-        }
+          if ($result->num_rows > 0) {
+              // output data of each row
+              while( $row = $result->fetch_assoc() ){
+                  array_push($data, $row);
+              }
+              return $data;
 
-        $this->closeConnection();
+            } else {
+                $result = [];
+                return $result;
+            }
+
+            $this->closeConnection();
   
-  }
+      }
 
-}
+    }
