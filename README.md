@@ -30,7 +30,7 @@ git pull origin master
 
 change this variable according to the name of your appfolder
 
-protected static $root_dir = "mvc";
+    protected static $root_dir = "mvc";
 
 # check if user is currently logged in
     protected $auth_user;
