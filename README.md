@@ -23,7 +23,7 @@ git pull origin master
 
     protected $password = "";
 
-protected $dbname = "plazaalemania";
+    protected $dbname = "plazaalemania";
 
 # setup global variables
 <appfolder>/app/core/Globals.php
