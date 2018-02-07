@@ -36,6 +36,19 @@ change this variable according to the name of your appfolder
 
     protected static $root_dir = "mvc";
 
+# running the app
+Make sure xampp: Apache && MySQL is running
+
+In your browser, type: http://localhost/appfolder/public/adminlogin
+
+# Url Guide
+
+Base Url: localhost/appfolder/public
+
+Next to /public is the filename ( /adminlogin )
+Next to filename is function name ( /adminlogin/<function_name> )
+Next to function name are parameters; you can have multiple params by adding another slash ( /adminlogin/<function_name/<params>/<params> )
+
 # check if user is currently logged in
     protected $auth_user;
     protected $admin_users;
