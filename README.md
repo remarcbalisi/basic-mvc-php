@@ -5,7 +5,9 @@ SQL is provided
 
 # create project directory in your xampp/htdocs and pull the repo
 git init
+
 git remote add origin https://github.com/remarcbalisi/basic-mvc-php.git
+
 git pull origin master
 
 # setup database
@@ -13,14 +15,18 @@ git pull origin master
 
 *edit these variables
 protected $servername = "localhost";
+
 protected $username = "root";
+
 protected $password = "";
+
 protected $dbname = "plazaalemania";
 
 # setup global variables
 <appfolder>/app/core/Globals.php
 
 change this variable according to the name of your appfolder
+
 protected static $root_dir = "mvc";
 
 # check if user is currently logged in
