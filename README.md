@@ -1,7 +1,10 @@
 # basic-mvc-php
 This is the basic mvc for php web dev, this system includes login, adding new user
 
-SQL is provided
+# sql is provided
+Open your php myadmin and create a new database, import the sql located in
+
+app/models/mvc.sql
 
 # create project directory in your xampp/htdocs and pull the repo
 git init
