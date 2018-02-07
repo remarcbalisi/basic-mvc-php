@@ -6,6 +6,10 @@ Open your php myadmin and create a new database, import the sql located in
 
 app/models/mvc.sql
 
+# test account
+email: admin@email.com
+password: admin
+
 # create project directory in your xampp/htdocs and pull the repo
 git init
 
